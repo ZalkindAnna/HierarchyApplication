@@ -1,4 +1,4 @@
-# HierarchyApplication
+# Hierarchy Application
 
 Using the attached file as the data set:
 1. Transform the data into a hierarchy (build a tree from the flat json data)
