@@ -32,7 +32,6 @@ public class HierarchyManager {
 
     /**
      * This method is called once the application is up and running
-     * @throws IOException
      */
     @EventListener(ApplicationReadyEvent.class)
     public void loadData() throws IOException {
@@ -44,8 +43,6 @@ public class HierarchyManager {
 
     /**
      * Find paths of matched nodes
-     * @param createdBy
-     * @return
      */
     public String query(String createdBy) {
         return searchNodes(nodes, createdBy)

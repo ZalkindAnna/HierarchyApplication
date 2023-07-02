@@ -17,8 +17,6 @@ public class HierarchyController {
 
     /**
      * Find paths of matched nodes
-     * @param createdBy
-     * @return
      */
     @GetMapping("/query")
     @ResponseBody
