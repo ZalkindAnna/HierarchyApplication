@@ -5,6 +5,9 @@ import lombok.Data;
 
 import java.util.List;
 
+/**
+ * This class represents a single node
+ */
 @Data
 @Builder
 public class Node {

@@ -18,12 +18,22 @@ import java.util.stream.Collectors;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
+/**
+ * Main business logic
+ */
 @Slf4j
 @Component
 public class HierarchyManager {
 
+    /**
+     * All nodes. Key - node id, value - node
+     */
     private Map<String, Node> nodes;
 
+    /**
+     * This method is called once the application is up and running
+     * @throws IOException
+     */
     @EventListener(ApplicationReadyEvent.class)
     public void loadData() throws IOException {
         ClassLoader classLoader = getClass().getClassLoader();
@@ -32,6 +42,11 @@ public class HierarchyManager {
         nodes = buildHierarchy(jsonString);
     }
 
+    /**
+     * Find paths of matched nodes
+     * @param createdBy
+     * @return
+     */
     public String query(String createdBy) {
         return searchNodes(nodes, createdBy)
                 .stream()
