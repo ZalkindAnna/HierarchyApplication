@@ -39,7 +39,6 @@ public class HierarchyManager {
                 .toList().toString();
     }
 
-
     private String getPathToRoot(Map<String, Node> nodes, Node node) {
         String path = node.getName();
         Node parent = node;
